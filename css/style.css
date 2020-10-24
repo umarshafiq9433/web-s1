@@ -164,3 +164,13 @@
 .fade {
   padding: 0px !important;
 }
+
+@media (max-width: 768px) {
+  .uls .row .col-md-2 h6 {
+    display: none;
+  }
+
+  .uls .row .col-md-2 br {
+    display: none;
+  }
+}
