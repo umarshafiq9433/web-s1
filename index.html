@@ -1,131 +1,1004 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chron.com</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-</head>
-<body>
-<header class="bg-white mt-4 pb-2 border-bottom border-secondary">
-    <div class="container">
+  </head>
+  <body>
+    <!--Header Started-->
+    <header class="bg-white mt-4 pb-2 border-bottom border-light sticky-top">
+      <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <button class="navbar-toggler" type="button">
-                    <span class="fa fa-bars"></span>
-                </button>
-            </div>
-            <div class="col-md-4">
-                <img src="./images/logo.svg" class="d-block mx-auto logo" alt="Logo">
-            </div>
-            <div class="col-md-4 text-right logo-right">
-                <span class="mx-2">Newsletters</span> | <span class="mx-2">Sign In</span> <i
-                    class="fa fa-search fa-1x"></i>
-            </div>
+          <div class="col-md-4">
+            <button
+              class="navbar-toggler"
+              id="modalActivate"
+              data-toggle="modal"
+              data-target="#exampleModalPreview"
+              type="button"
+            >
+              <span class="fa fa-bars"></span>
+            </button>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="./images/logo.svg"
+              class="d-block mx-auto logo"
+              alt="Logo"
+            />
+          </div>
+          <div class="col-md-4 text-right logo-right">
+            <span class="mx-2">Newsletters</span> |
+            <span class="mx-2">Sign In</span> <i class="fa fa-search fa-1x"></i>
+          </div>
         </div>
-    </div>
-</header>
-<div class="container">
-    <nav class="navbar navbar-expand-md navbar-light">
+      </div>
+    </header>
+    <!--Header End-->
 
+    <!--Navbar Started-->
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light">
         <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="" class="nav-link">News</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Food</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Culture</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Sports</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Lifestyle</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Business</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Cars</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Shopping</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Coupons</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Homes</a></li>
-                <li class="nav-item"><a href="" class="nav-link">HoustonChronicle.com</a></li>
-            </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link">News</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Food</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Culture</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Sports</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Lifestyle</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Business</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Cars</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Shopping</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Coupons</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Homes</a></li>
+            <li class="nav-item">
+              <a href="" class="nav-link">HoustonChronicle.com</a>
+            </li>
+          </ul>
         </div>
-    </nav>
-</div>
-<div class="bg-light">
-    <div class="col-md-11 mx-auto">
-        <div class="nav-link border-bottom border-secondary">
-            HAPPENING NOW
-        </div>
-        <div class="row py-3">
-            <div class="col-md-6 col-lg-3 col-12">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="https://s.hdnux.com/photos/01/14/70/07/20152829/5/ratio1x1_92.jpg" class="w-100"
-                             alt="">
-                    </div>
-                    <div class="col-1 pt-2"><i class="fa fa-circle text-primary"></i></div>
-                    <div class="col-7 nav-link first-para">
-                        Memes mock mildly more civil final presidential debate
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-12">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="https://s.hdnux.com/photos/01/14/66/22/20145299/7/ratio1x1_92.jpg" class="w-100"
-                             alt="">
-                    </div>
-                    <div class="col-1 pt-2"><i class="fa fa-circle text-primary"></i></div>
-                    <div class="col-7 nav-link first-para">
-                        Houston ISD teachers hold 'sick out' to protest COVID protocols
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-12">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="https://s.hdnux.com/photos/01/14/63/04/20132101/25/ratio1x1_92.jpg" class="w-100"
-                             alt="">
-                    </div>
-                    <div class="col-1 pt-2"><i class="fa fa-circle text-primary"></i></div>
-                    <div class="col-7 nav-link first-para">
-                        Senate Republicans fume as Mnuchin gives ground to Pelosi
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-12">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="https://s.hdnux.com/photos/01/14/66/30/20145709/9/ratio1x1_92.jpg"" class="w-100"
-                             alt="">
-                    </div>
-                    <div class="col-1 pt-2"><i class="fa fa-circle text-primary"></i></div>
-                    <div class="col-7 nav-link first-para">
-                        World Series draws record-low audience for 2nd night
-                    </div>
-                </div>
-            </div>
-        </div>
+      </nav>
     </div>
-</div>
-<div class="container-fluid my-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="brdr py-2">
-                    <span class="text-primary">CORONAVIRUS</span>
-                    Abbott sends help to El Paso as cases break records
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--Navbar End-->
 
-</div>
-</body>
+    <!--Section Started-->
+    <div class="bg-light">
+      <div class="col-md-11 mx-auto">
+        <div class="nav-link border-bottom border-secondary">HAPPENING NOW</div>
+        <div class="row py-3">
+          <div class="col-md-6 col-lg-3 col-12">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://s.hdnux.com/photos/01/14/70/07/20152829/5/ratio1x1_92.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div class="col-1 pt-2">
+                <i class="fa fa-circle text-primary"></i>
+              </div>
+              <div class="col-7 nav-link first-para">
+                Memes mock mildly more civil final presidential debate
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-12">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://s.hdnux.com/photos/01/14/66/22/20145299/7/ratio1x1_92.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div class="col-1 pt-2">
+                <i class="fa fa-circle text-primary"></i>
+              </div>
+              <div class="col-7 nav-link first-para">
+                Houston ISD teachers hold 'sick out' to protest COVID protocols
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-12">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://s.hdnux.com/photos/01/14/63/04/20132101/25/ratio1x1_92.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div class="col-1 pt-2">
+                <i class="fa fa-circle text-primary"></i>
+              </div>
+              <div class="col-7 nav-link first-para">
+                Senate Republicans fume as Mnuchin gives ground to Pelosi
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-12">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://s.hdnux.com/photos/01/14/66/30/20145709/9/ratio1x1_92.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div class="col-1 pt-2">
+                <i class="fa fa-circle text-primary"></i>
+              </div>
+              <div class="col-7 nav-link first-para">
+                World Series draws record-low audience for 2nd night
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section Ends-->
+
+    <!--Section Started-->
+    <div class="container-fluid my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="brdr py-2">
+              <span class="text-primary">CORONAVIRUS</span>
+              Abbott sends help to El Paso as cases break records
+            </div>
+            <div class="col-md-12 brdr">
+              <div class="row my-3">
+                <div class="col-md-8">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/66/22/20145299/7/ratio3x2_575.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <a href="#" class="tag">EDUCATION</a>
+                  <div class="sec-1-para">
+                    Houston ISD teachers hold 'sick out' to protest COVID
+                    protocols
+                  </div>
+                  <br />
+                  <div>
+                    Houston teachers aren't pleased with the conditions they're
+                    expected to teach in amid the ongoing COVID-19 pandemic.
+                    <br /><br /><span class="text-primary"
+                      ><i class="fa fa-bars"></i
+                    ></span>
+                    <b>By ShaCamree Gowdy</b>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <img
+                        src="https://s.hdnux.com/photos/01/14/70/22/20153522/5/ratio3x2_400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                      <span
+                        class="text-primary"
+                        style="border-bottom: 1px dotted #00baf7"
+                        ><b>Space</b></span
+                      ><br />
+                      <span class="sec-1-quote"
+                        >Astronaut votes from space, leaving the rest of us no
+                        excuse</span
+                      >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <img
+                        src="https://s.hdnux.com/photos/01/13/02/36/19670928/7/ratio3x2_400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                      <span
+                        class="text-primary"
+                        style="border-bottom: 1px dotted #00baf7"
+                        ><b>Coronavirus</b></span
+                      ><br />
+                      <span class="sec-1-quote"
+                        >Texas could face a second wave of COVID-19 infections,
+                        doc warns</span
+                      >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <img
+                        src="https://s.hdnux.com/photos/01/14/70/36/20154240/5/ratio3x2_400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                      <span
+                        class="text-primary"
+                        style="border-bottom: 1px dotted #00baf7"
+                        ><b>Celebrities</b></span
+                      ><br />
+                      <span class="sec-1-quote"
+                        >A life coaching lesson from Houston's Riff Raff</span
+                      >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <img
+                        src="https://s.hdnux.com/photos/01/11/64/27/19350999/3/ratio3x2_400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                      <span
+                        class="text-primary"
+                        style="border-bottom: 1px dotted #00baf7"
+                        ><b>Lifestyle</b></span
+                      ><br />
+                      <span class="sec-1-quote"
+                        >10 signs you are definitely in Houston</span
+                      >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <img
+                        src="https://s.hdnux.com/photos/01/14/70/07/20152793/5/ratio3x2_400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                      <span
+                        class="text-primary"
+                        style="border-bottom: 1px dotted #00baf7"
+                        ><b>Culture</b></span
+                      ><br />
+                      <span class="sec-1-quote"
+                        >Pentatonix's Scott Hoying writes viral election song of
+                        2020</span
+                      >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <img
+                        src="https://s.hdnux.com/photos/01/14/67/04/20148490/6/ratio3x2_400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                      <span
+                        class="text-primary"
+                        style="border-bottom: 1px dotted #00baf7"
+                        ><b>Shopping</b></span
+                      ><br />
+                      <span class="sec-1-quote"
+                        >Chron Exclusive: Get these 2 Texans shirts for only
+                        $30</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12 nav-link">TODAY'S PICKS</div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/70/12/20152969/5/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Abbott sends help to El Paso as cases break records
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    El Paso has seen record increases of COVID-19 cases in the
+                    past few days.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/62/32/20129443/3/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Here are the new rules HISD unveiled for dealing with COVID
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Students returned to campus after 16 HISD schools closed due
+                    to COVID-19 earlier this week.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/66/76/20148125/5/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Sheriff will help celebrities leave U.S. if Trump wins
+                    election
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Any celebs want to "pack up" annd leave the U.S.A. if
+                    President Donald Trump is re-elected?
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/66/67/20147685/3/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Take a sip out of the Shire Distilling Co.’s distillery tour
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Learn how your favorite drinks are made in this distillery
+                    tour.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="col-12 border border-secondary py-5 px-3 latest-news">
+              Latest News<br /><br />
+              <br />
+
+              Matthew McConaughey Reveals He Was Sexually Abused as a Teen in
+              New Memoir<br />
+              <hr />
+              <br />
+              Conflict raging over 'The Eyes of Texas' school song<br />
+              <hr />
+              <br />
+              Judge moves criminal case against Texas attorney general<br />
+              <hr />
+              <br />
+              Court records: Man had guns, search online for Biden home<br />
+              <hr />
+              <br />
+              Walmart sues US in pre-emptive strike in opioid abuse battle<br />
+              <hr />
+              <br />
+              MTV is taking over Houston to celebrate early voting<br />
+              <hr />
+              <br />
+              California prosecutors again seek death for Scott Peterson<br />
+              <hr />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section End-->
+
+    <!--Section Started-->
+    <div class="container-fluid">
+      <div class="container backgorund p-5">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="image-1 col-md-6">
+              <img
+                src="https://s.hdnux.com/photos/01/14/14/46/19974545/3/rawImage.jpg"
+                class="w-100 h-100"
+                alt=""
+              />
+            </div>
+            <div class="col-md-6 image-2 p-5">
+              <span class="heading-1">WEATHER | CHRON</span><br /><br />
+              <span class="heading-2">It's finally almost fall, y'all</span
+              ><br /><br />
+              <p class="para">
+                A cold front moving through Houston on Friday will bring a cool
+                down and sunny skies Saturday. <br /><br /><b
+                  ><i class="fa fa-list"></i> By Jay R. Jordan</b
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section Ended-->
+    <hr />
+    <!--Section Started-->
+    <div class="container-fluid my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="py-2">
+              <span
+                class="font-weight-bolder display-4"
+                style="
+                  border-bottom: 5px solid #00c0ff;
+                  line-height: 0px;
+                  margin-bottom: 10px;
+                "
+                >Only In Houston</span
+              >
+            </div>
+            <div class="col-md-12">
+              <div class="row my-3">
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b
+                        >How’d I manage to spend so much money during the COVID
+                        lockdown?</b
+                      >
+                      <br />
+                      By ShaCamree Gowdy
+                    </div>
+                    <div class="col-4 my-2">
+                      <img
+                        src="https://s.hdnux.com/photos/77/50/21/16680014/11/ratio1x1_375.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b
+                        >Marfa, Texas is a beautiful somewhere in the middle of
+                        nowhere</b
+                      >
+                      <br />
+                      By Alison Medley
+                    </div>
+                    <div class="col-4 my-2">
+                      <img
+                        src="https://s.hdnux.com/photos/01/14/42/23/20063428/3/ratio1x1_375.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                    <hr />
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b
+                        >Why I decided to find a therapist during the
+                        pandemic</b
+                      >
+                      <br />
+                      By Shelby Stewart
+                    </div>
+                    <div class="col-4">
+                      <img
+                        src="https://s.hdnux.com/photos/01/14/56/00/20111374/5/ratio1x1_375.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                    <hr />
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b
+                        >Review: Whataburger's new spicy sandwiches are perfect
+                        for Texans</b
+                      >
+                      <br />
+                      By Shelby Stewart
+                    </div>
+                    <div class="col-4 my-2">
+                      <img
+                        src="https://s.hdnux.com/photos/01/14/45/01/20074573/6/ratio1x1_375.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/57/57/20118524/3/ratio3x2_875.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-para">
+                    Opinion: How many must die for a magazine cover?
+                  </div>
+                  <br />
+                  <div>
+                    In recent months, there's been a change in content for most
+                    magazines, as many have chosen to highlight the issues of
+                    today: the deaths of George Floyd, Breonna Taylor, and other
+                    Black Americans...
+                    <br /><br /><b>By Shelby Stewart </b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12 nav-link">TODAY'S PICKS</div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/70/12/20152969/5/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Abbott sends help to El Paso as cases break records
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    El Paso has seen record increases of COVID-19 cases in the
+                    past few days.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/62/32/20129443/3/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Here are the new rules HISD unveiled for dealing with COVID
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Students returned to campus after 16 HISD schools closed due
+                    to COVID-19 earlier this week.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/66/76/20148125/5/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Sheriff will help celebrities leave U.S. if Trump wins
+                    election
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Any celebs want to "pack up" annd leave the U.S.A. if
+                    President Donald Trump is re-elected?
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/66/67/20147685/3/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Take a sip out of the Shire Distilling Co.’s distillery tour
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Learn how your favorite drinks are made in this distillery
+                    tour.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="col-12">
+              <div class="nav-link">LIFESTYLE</div>
+              <div class="row">
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">Lifestyle</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >10 signs you are definitely in Houston</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/11/64/27/19350999/3/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">Lifestyle</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >So, when is this highway sign going to be fixed?</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/12/70/02/19628213/3/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">Lifestyle</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >Balmoral gets spooky with haunted lagoon Halloween
+                    weekend</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/65/36/20141961/3/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">Lifestyle</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >One Houston woman's inspiring battle against breast
+                    cancer</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/46/36/20080569/6/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">Lifestyle</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >One Houston woman's inspiring battle against breast
+                    cancer</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/13/04/27/19678689/6/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section End-->
+    <hr />
+    <!--Section Started-->
+    <div class="container-fluid my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="py-2">
+              <span
+                class="font-weight-bolder display-4"
+                style="
+                  border-bottom: 5px solid #ffbd15;
+                  line-height: 0px;
+                  margin-bottom: 10px;
+                "
+                >Chron Shopping</span
+              >
+            </div>
+            <div class="col-md-12">
+              <div class="row my-3">
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b
+                        >Chron Exclusive: Get these 2 Texans shirts for only $30
+                      </b>
+                      <br />
+                      <br />
+                      <br />
+                    </div>
+                    <div class="col-4 my-2">
+                      <img
+                        src="https://dealimages.hearstnp.com/wp-content/uploads/sites/3/2020/10/23091411/featured_image2273--600x400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b>Save up to 75% off these Halloween costumes </b>
+                      <br />
+                      <br />
+                      <br />
+                    </div>
+                    <div class="col-4 my-2">
+                      <img
+                        src="https://dealimages.hearstnp.com/wp-content/uploads/sites/3/2020/10/23150614/featured_image2279--600x400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                    <hr />
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b>These Lulemon leggings are all on sale </b>
+                      <br />
+                      <br />
+                      <br />
+                    </div>
+                    <div class="col-4">
+                      <img
+                        src="https://dealimages.hearstnp.com/wp-content/uploads/sites/3/2020/10/22205418/featured_image2268--600x400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                    <hr />
+                    <div class="col-8 sec-1-quote-2 my-2">
+                      <b>Let the games begin with the PS5 preorder </b>
+                      <br />
+                      <br />
+                      <br />
+                    </div>
+                    <div class="col-4 my-2">
+                      <img
+                        src="https://dealimages.hearstnp.com/wp-content/uploads/sites/3/2020/10/21142214/featured_image2200--600x400.jpg"
+                        class="w-100"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <img
+                    src="https://dealimages.hearstnp.com/wp-content/uploads/sites/3/2020/10/23160824/spinner.png"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-para">
+                    Doorbuster Flash Deal: 6-piece Spinner Luggage Set for only
+                    $39.99!
+                  </div>
+                  <br />
+                  <div>
+                    Act Fast! This deal is hot! 4 color options available.
+                    <br /><br /><b>By Shelby Stewart </b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12 nav-link">TODAY'S PICKS</div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/70/12/20152969/5/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Abbott sends help to El Paso as cases break records
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    El Paso has seen record increases of COVID-19 cases in the
+                    past few days.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/62/32/20129443/3/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Here are the new rules HISD unveiled for dealing with COVID
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Students returned to campus after 16 HISD schools closed due
+                    to COVID-19 earlier this week.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/66/76/20148125/5/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Sheriff will help celebrities leave U.S. if Trump wins
+                    election
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Any celebs want to "pack up" annd leave the U.S.A. if
+                    President Donald Trump is re-elected?
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/66/67/20147685/3/ratio3x2_138.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                  <div class="sec-1-quote-bottom">
+                    Take a sip out of the Shire Distilling Co.’s distillery tour
+                  </div>
+                  <div class="sec-1-para-bottom">
+                    Learn how your favorite drinks are made in this distillery
+                    tour.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="col-12">
+              <div class="nav-link">Live News Stream</div>
+              <div class="row">
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">News</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >California utility may cut power to 1 million people</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/71/17/20157384/27/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">News</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >Work already underway for presidential inauguration</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/71/21/20157554/5/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">News</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >Buehler leads Dodgers over Rays 6-2 for 2-1 Series lead</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/71/14/20157209/7/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">News</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >World Series Notebook: Urías, 4-0 in postseason, set for
+                    G4</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/62/23/20128988/15/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-8 sec-1-quote-2 my-2">
+                  <b class="text-primary">News</b>
+                  <br />
+                  <br />
+                  <b style="font-family: 'Source Sans Pro', sans-serif"
+                    >Asia Today: Sri Lanka closes harbors after 609 test
+                    positive</b
+                  >
+                </div>
+                <div class="col-4 my-2">
+                  <img
+                    src="https://s.hdnux.com/photos/01/14/71/12/20157078/7/ratio1x1_95.jpg"
+                    class="w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section End-->
+
+    <!--Modal-->
+    <div
+      class="modal fade left"
+      id="exampleModalPreview"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalPreviewLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog-full-width modal-dialog momodel modal-fluid"
+        role="document"
+      >
+        <div class="modal-content-full-width modal-content">
+          <div class="modal-header-full-width modal-header text-center">
+            <h5 class="modal-title w-100" id="exampleModalPreviewLabel">
+              Material Design Full Screen Modal
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span style="font-size: 1.3em" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 class="section-heading text-center wow fadeIn my-5 pt-3">
+              Not for money, but for humanity
+            </h1>
+          </div>
+          <div class="modal-footer-full-width modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger btn-md btn-rounded"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary btn-md btn-rounded">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal-->
+
+    <footer style="background-color: #e7e7e7">
+      <div class="container py-5">
+        <div class="col-md-4">
+          <img src="./images/logo.svg" width="100px" alt="" />
+          <br />
+          <br />
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
